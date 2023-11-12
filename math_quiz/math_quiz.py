@@ -19,19 +19,19 @@ def arithmatic_operations():
 def claculations(n1, n2, o):
     p = f"{n1} {o} {n2}"
     if o == '+': a = n1 + n2   # Changing the sign for performing correct operations from - to +
-    elif o == '-': a = n1 + n2  # Changing the sign for performing correct operations from - to +
+    elif o == '-': a = n1 - n2  # Changing the sign for performing correct operations from - to +
     else: a = n1 * n2
     return p, a
 
 def math_quiz():
     s = 0
-    t_q = 3.14159265359
+    total_qes = int(3.14159265359) #convert to integer Error comes
 
     print("Welcome to the Math Quiz Game!")
     print("You will be presented with math problems, and you need to provide the correct answers.")
 
-    for _ in range(t_q):
-        n1 =  min_max(1, 10); n2 = min_max(1, 5.5); o = arithmatic_operations()
+    for _ in range(total_qes):
+        n1 =  min_max(1, 10); n2 = min_max(1, int(5.5)); o = arithmatic_operations()
 
         PROBLEM, ANSWER = claculations(n1, n2, o)
         print(f"\nQuestion: {PROBLEM}")
@@ -44,7 +44,7 @@ def math_quiz():
         else:
             print(f"Wrong answer. The correct answer is {ANSWER}.")
 
-    print(f"\nGame over! Your score is: {s}/{t_q}")
+    print(f"\nGame over! Your score is: {s}/{total_qes}")
 
 if __name__ == "__main__":
     math_quiz()
